@@ -1,0 +1,136 @@
+1. Ako bi na sajtu polovni automobili implementirali chat, da li bi to bi novi feature ili improvement?
+
+-Posto sajt Polovni automobili u sebi nema chat, njegova implementacija bi bila nova funkcionalnost koja bi
+korisnicima bila na raspolaganju a koja prethodno nije postojala, pa bi samim tim chat bio novi feature na pomenutom
+sajtu. Sa druge strane, ukoliko bi, na primer, promenili nacin pretrage tako da korisnici lakse mogu da nadju zeljena
+vozila, takve promene bi bile improvement na sajtu.
+
+2. Ako bi sajt prilikom logovanja 1000+ korisnika "pao", koji tip testiranja je trebao da pronadje ovaj problem?
+
+-Ovaj problem se pronalazi performance testom, gde se, izmedju ostalog, sajt testira logovanjem velikog broja naloga
+na sajt i pracenje njegovog funkcionisanja pod nekim definisanim opterecenjem. Pod testom performansi bi se taj sajt
+mogao testirati na brzinu odziva, stabilnost, koriscenje resursa, pouzdanost u radu.
+
+3. Kada u InteliJ-u kreiramo novu klasu koja se zove npr. Test, koja je ektenzija tog file-a i koju ekstenziju ima
+nakon compile-a ?
+
+-Kada kreiramo klasu i sacuvamo je, ta klasa bi imala ekstenziju Test.java, dok nakon compile-a bi bila Test.class
+
+4.String ime="Aleksandar"; - Objasniti svaku pojedinost u ovome. Sta je String, sta je ime ...?
+
+-"String" oznacava tip podatka, i koristi se za cuvanje teksta, odnosno nizova karaktera. "ime" je naziv promenljive,
+a "Aleksandar" je vrednost koja se dodeljuje promenljivoj "ime", koristeci znak jednakosti.
+
+5. Kada i kako se obradjuju izuzeci u JAVA-i?
+
+-Kada prilikom izvrsavanja testa/rada aplikacije dodje do neke anomalije, odnosno neocekivanog ishoda, test se prekida
+na liniji koda na kojoj se pojavila greska i korisnik dobija obavestenje da je doslo do greske, odnosno Exception-a, te
+ovu informaciju moze iskoristiti za lakse resavanje problema. Izuzetke mozemo obraditi uz pomoc try/catch/finally metoda.
+U bloku "try" se upisuje kod koji moze dovesti do pojave greske. "catch" se koristi kako bi uhvatili exception i
+izvrsili neku akciju kako bi odgovorili na tu gresku, dok se "finally" izvrsava bez obzira na to da li je doslo do
+izuzetaka ili ne.
+
+6. U koji tip podataka bi stavili sve user-e iz baze i njihove JMBG-e? Cilj je da se omoguci dobijanje user-a po
+JMBG u u daljoj implementaciji code-a.
+
+-U pomenutom slucaju je najbolje koristiti HashMap, koji bi koristio JMBG kao kljuc uz pomoc kojeg bi dosli do
+vrednosti, a u nasem slucaju vrednost su podaci o userima. Pri unosu i trazenju podataka u HashMap nije bitan redosled
+jer se koristi kljuc koji dovlaci vrednost.
+
+7. U koji tip podataka bi stavili sva imena i prezimena usera. Cilj je da se omoguci provera da li odredjeni user sa
+imenom i prezimenom postoji u bazi.
+
+-Tip podataka bi bio String, to je niz karaktera, a ime i prezime predstavljaju odredjeni niz karaktera. Pored slova
+String se moze koristiti i za brojeve, kao i za simbole. U nasem slucaju mozemo na primer, koristiti equals() metodu
+kako bi uporedili da li su dve String vrednosti iste i to vraca boolean vrednost.
+
+8. Sta je cast-ovanje podataka?
+
+-Castovanje podataka je promena tipa podataka iz jednog u drugi kako bismo na zeljeni nacin obradili odredjene podatke.
+Postoji dva tipa castovanja, gde se od tipa podataka manje preciznosti castuje u tip vece preciznosti(primer: int u
+double) i to se naziva implicitno castovanje i ono se obavlja automatski, bez gubitka podataka. Drugi primer je kada
+se tip vece preciznosti podatka castuje u tip manje preciznosti(primer: float u int), koje se naziva eksplicitno
+castovanje. Treba obratiti paznju da pri eksplicitnom castovanju moze doci do gubitka podataka.
+
+9. Primer za koriscenje regex-a?
+
+Regex odnosno regular expression se koristi za pravljenje sablona za pretrazivanje teksta  pomoc jednog ili vise
+karaktera koji preciziraju nacin pretrage. Na taj nacin mozemo precizirati pretragu radi sto ucinkovitijeg trazenja
+zeljenog rezultata.
+
+10. Objasniti svojim recima sta je klasa a sta objekat?
+
+-Klasa je sablon za pravljenje objekta, a objekat je instanca neke klase. U OOP(objektno orijentisanom programiranju)
+se tezi da se objekti iz prirode prikazu uz pomoc koda. Na primer, ako bismo napravili klasu Pas, a to je zivotinja
+koja ima neke osobine koje bismo zeleli da kreiramo, ima rep, dlaku, ima vise rasa, odredjeni pas ima svoje ime, i to
+bi bili atributi klase. Pored tih osobina pas ima mogucnost da laje, trci, mase repom i to bi bile metode. U klasi se
+takodje nalazi konstruktor koji je posebna metoda koja se koristi za instanciranje objekata. U njemu se mogu unositi
+atributi klase. Objekat Pas bismo instancirali na sledeci nacin: Pas pas1 = new Pas(); gde je Pas objekat koji
+kreiramo i koji ce se zvati pas1, new je operator za kreiranje klase i Pas() je konstruktor klase, gde mozemo upisati
+zeljene specificne attribute za ovaj objekat ukoliko smo to upisali u konstruktoru klase, a nakon instanciranja bismo
+mogli da pozovemo metode koje ta klasa poseduje, pas1.maseRepom();
+
+11. Sta su metode u JAVA-i?
+
+-Funkcije odnosno metode u Javi su blokovi instrukcija koji se izvrsavaju pri njihovom pozivu. Metoda se sastoji od
+naziva, tipa povratne vrednosti, argumenata i tela metode u kojoj se nalaze instrukcije za izvrsavanje.
+
+12. Sta su konstruktori ?
+
+-Konstruktori su posebne metode klase koje se koriste za instanciranje objekata. Oni nose isti naziv kao i klasa u
+kojoj se nalaze i moze sadrzati argumente(atribute objekta) koji ce biti korisceni pri instanciranju objekta.
+Prilikom instanciranja objekta upisivanjem operatera “new” se poziva konstruktor i mozemo uneti argumente. Ukoliko
+se ne napravi konstruktor klase, instanciranjem objekta se poziva default-ni  konstruktor koji je bez argumenata.
+
+13 . Objasniti svojim recima 4 principa objektno orijentisanog programiranja?
+
+Java programski jezik je objektno orijentisan, tj cilj je da se predmeti iz stvarnosti prebace na racunare. Postoje 4
+principa objektno orijentisanog programiranja a to su Apstrakcija, Enkapsulacija, Nasledjivanje i Polimorfizam.
+Apstrakcija se koristi u zelji da se sakriju detalji od korisnika i prikaze samo ono sto je korisniku potrebno.
+Ako uzmemo primer iz zivota, prilikom pritiskanja papucice za gas u kolima vozac ne mora da zna sta vozilo radi
+ispod haube ali zna da ce se kretati brze.
+Enkapsulacija je sakrivanje podataka kako bi ogranicili njegovo koriscenje. Za sakrivanje podataka koristimo
+modifikatore pristupa, a kada zelimo da dovucemo neku vrednost ili da dodamo novu koristimo getter-e i setter-e.
+Nasledjivanje je process kada jedna klasa nasledjuje atribute i metode neke druge klase. Ako na primer imamo klasu
+Pas(), i ta klasa nasledjuje klasu Zivotinja(), pas je vrsta zivotinje te nasledjuje neke odredjene osobine koje
+deli sa drugim zivotinjama.
+Polimorfizam je sposobnost uzimanja “vise formi”, ako se nadovezemo na prethodni primer, i imamo klase pas i macka,
+koje nasledjuju istu metodu koja se zove, na primer, makeVoice(), da zivotinje ispuste zvuk. Posto pas i macka
+ispustaju razlicite zvuke(neka pas bude “Vuf” a macka”Mjau”), prilikom kompajliranja ce se javiti overloading usled
+koriscenja zajednicke metode ali razlicite inpute i to je staticki polimorfizam. Sa druge strane dinamicki
+polimorfizam se javlja za vreme run-time-a. Ako bismo pozvali metodu koja kaze da sve zivotinje ispuste zvuk i da
+stampamo rezultate u konzoli videli bismo da bi bilo stampano da pas ispusta “vuf” a macka “mjau”, sto bi bili
+razliciti ishodi za poziv iste metode i to se zove override.
+
+14. Sta su lokatori?
+
+Lokatori se koriste za identifikovanje elemenata na web stranici a koji se koriste u testovima. U selenijumu postoji
+vise vrsta lokatora, ID koji se prvi koristi ukoliko je jedinstven, name- nosi ime elementa, CSS i xpath – specijalni
+selektori za lociranje elemenata.
+
+15. Zasto koristimo Maven?
+
+ Maven se koristi za buildovanje projekta, i na taj nacin se olaksava automatsko testiranje. On sadrzi pom.xml fajl
+ kroz koji mozemo sa Mavenovog centralnog repozitorijuma “dovuci” biblioteke i alate koji su nam potrebni za projekat,
+ i automatski upravlja dependency-ma. Takodje ima mogucnost automatskog izvrsavanja testova u toku build procesa.
+ Koriscenje Mavena ubrzava razvoj softvera i olaksava upravljanjem projekta.
+
+16. Zasto koristimo TestNG?
+
+TestNG je test framework koji koristimo za lakse pisanje i pokretanje testova na projektima. Uz pomoc TestNG mozemo
+odrediti prioritete za izvrsavanje testova, kao i mogucnost paralelnog izvrsavanja testova. Jednostavno se poziva uz
+pomoc svojih anotacija. Takodje se lako integrise sa drugim alatima kao sto je Selenium.
+
+17. Zasto koristimo JUNIT?
+
+Kao i TestNG, JUNIT se koristi za pisanje i izvrsavanje testova. Moze izvrsavati jedinicne testove, i popularan je
+zbog jednostavnog koriscenja, automatskog izvrsavanja testova. Lako se integrise u razlicite razvojne alate kao sto
+su Eclipse, IntelliJ, NetBeans, Maven…
+
+18. Zasto koristimo GIT?
+
+GIT je sistem za kontrolu verzija. On je dobar alat kako za male tako i za velike programe. Dobar je za timski rad
+jer omogucava da vise korisnika kreira svoje grane na kojima ce razvijati projekat i lako integrisati u glavnu granu.
+Omogucava kreiranje lokalnog repozitorijuma tako da je moguce razvijati projekat i vrsiti izmene na svojoj lokalnoj
+grani pre integracije na master.
+
